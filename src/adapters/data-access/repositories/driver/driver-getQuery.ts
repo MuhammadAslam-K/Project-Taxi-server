@@ -1,4 +1,3 @@
-import { ObjectId } from "mongoose";
 import DriverSchema from "../../models/driver-model";
 
 

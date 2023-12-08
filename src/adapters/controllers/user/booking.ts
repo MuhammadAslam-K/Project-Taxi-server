@@ -1,11 +1,11 @@
 import { Request, Response } from "express"
-import login from "../../../business/use-case/user/login"
+import booking from "../../../business/use-case/user/booking"
 
 
 export default {
-    login: async (req: Request, res: Response) => {
+    booking: async (req: Request, res: Response) => {
         try {
-            res.json(await login.login(req.body))
+            res.json(await booking.bookNewRide(req.body))
         } catch (error) {
             res.status(500).json({ error: (error as Error).message })
         }
