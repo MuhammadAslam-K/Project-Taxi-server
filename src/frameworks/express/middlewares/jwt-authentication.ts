@@ -10,6 +10,7 @@ export default {
             const publicRoutes = [
                 /**********  User **********/
                 "/signup",
+                "/login",
 
             ]
 

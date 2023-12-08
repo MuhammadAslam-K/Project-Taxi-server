@@ -12,6 +12,7 @@ exports.default = {
             const publicRoutes = [
                 /**********  User **********/
                 "/signup",
+                "/login",
             ];
             if (publicRoutes.includes(requestedRoute)) {
                 return next();
