@@ -13,6 +13,9 @@ exports.default = {
                 /**********  User **********/
                 "/signup",
                 "/login",
+                /**********  DRIVER **********/
+                "/driver/signup",
+                "/driver/login",
             ];
             if (publicRoutes.includes(requestedRoute)) {
                 return next();
