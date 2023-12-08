@@ -6,6 +6,7 @@ import http from 'http'
 import jwtTokenAuth from "../frameworks/express/middlewares/jwt-authentication"
 import userRoute from '../frameworks/express/router/user';
 import connect from '../frameworks/database/mongoDB-connection';
+import driverRoute from '../frameworks/express/router/driver';
 
 
 dotenv.config()
@@ -28,6 +29,7 @@ app.use(
 app.use(jwtTokenAuth.validateToken);
 
 app.use('/', userRoute);
+app.use('/driver', driverRoute);
 
 
 
