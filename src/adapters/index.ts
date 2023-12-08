@@ -5,8 +5,8 @@ import cors from 'cors';
 import http from 'http'
 import jwtTokenAuth from "../frameworks/express/middlewares/jwt-authentication"
 import userRoute from '../frameworks/express/router/user';
-import connect from '../frameworks/database/mongoDB-connection';
 import driverRoute from '../frameworks/express/router/driver';
+import connect from '../frameworks/database/mongoDB-connection';
 
 
 dotenv.config()

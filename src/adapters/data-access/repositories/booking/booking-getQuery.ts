@@ -1,4 +1,3 @@
-import { ObjectId } from "mongoose";
 import BookingSchema from "../../models/booking-model";
 
 export default {
@@ -9,5 +8,14 @@ export default {
         } catch (error) {
             throw new Error((error as Error).message);
         }
-    }
+    },
+
+    getBookingByLocation: async (pickupLocation: string) => {
+        try {
+            const rides = await BookingSchema.find({ pickupLocation, driverStatus: "Pending" })
+            return rides || null
+        } catch (error) {
+            throw new Error((error as Error).message);
+        }
+    },
 }
