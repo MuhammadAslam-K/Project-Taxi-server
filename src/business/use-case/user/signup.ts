@@ -1,7 +1,7 @@
-import userRepositoryGetQuery from "../../adapters/data-access/repositories/user/user-getQuery";
-import userRepositorySaveQuery from "../../adapters/data-access/repositories/user/user-saveQuery";
-import { Signup } from "../interfaces/common";
-import encryptionDecryption from "../shared/encryptionDecryption";
+import userRepositoryGetQuery from "../../../adapters/data-access/repositories/user/user-getQuery";
+import userRepositorySaveQuery from "../../../adapters/data-access/repositories/user/user-saveQuery";
+import { Signup } from "../../interfaces/common";
+import encryptionDecryption from "../../shared/encryptionDecryption";
 
 
 export default {
