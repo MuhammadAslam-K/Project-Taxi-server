@@ -48,7 +48,6 @@ exports.default = {
             }
         }
         catch (error) {
-            console.log("error in jwt ", error);
             return res.status(401).json({ error: error.message });
         }
     },

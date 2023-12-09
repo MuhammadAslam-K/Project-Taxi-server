@@ -7,7 +7,6 @@ export default {
         try {
             res.json(await driver.getDriverInfoById(req.query.driverId as string))
         } catch (error) {
-            console.log(error)
             res.status(500).json({ error: (error as Error).message })
         }
     },

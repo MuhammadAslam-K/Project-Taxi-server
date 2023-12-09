@@ -29,7 +29,7 @@ exports.default = {
                 }
             }
             else {
-                throw new Error("User doesn't exists please login !!!");
+                throw new Error("User doesn't exists please signup !!!");
             }
         }
         catch (error) {

@@ -11,7 +11,6 @@ export default {
                 messages: data.message
             })
             const result = await chat.save()
-            console.log("result :", result)
             return result
         } catch (error) {
             throw new Error((error as Error).message);
