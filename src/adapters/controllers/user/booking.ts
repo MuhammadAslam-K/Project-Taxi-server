@@ -7,7 +7,6 @@ export default {
         try {
             res.json(await booking.bookNewRide(req.body, req.token.data))
         } catch (error) {
-            console.log(error)
             res.status(500).json({ error: (error as Error).message })
         }
     },

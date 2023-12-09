@@ -34,6 +34,7 @@ const jwt_authentication_1 = __importDefault(require("../frameworks/express/midd
 const user_1 = __importDefault(require("../frameworks/express/router/user"));
 const driver_1 = __importDefault(require("../frameworks/express/router/driver"));
 const mongoDB_connection_1 = __importDefault(require("../frameworks/database/mongoDB-connection"));
+const socket_io_1 = require("../frameworks/socket-io/socket-io");
 dotenv.config();
 const port = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
@@ -49,6 +50,7 @@ app.use((0, cors_1.default)({
 app.use(jwt_authentication_1.default.validateToken);
 app.use('/', user_1.default);
 app.use('/driver', driver_1.default);
+(0, socket_io_1.setUpSocketIO)(server);
 if (MONGO_URL) {
     (0, mongoDB_connection_1.default)(MONGO_URL).then(() => {
         server.listen(port, () => console.log(`Server started at http://localhost:${port}`));

@@ -18,7 +18,7 @@ export default {
                     return token || null
                 }
             } else {
-                throw new Error("driver doesn't exists please login !!!")
+                throw new Error("driver doesn't exists please signup !!!")
             }
         } catch (error) {
             throw new Error((error as Error).message);
