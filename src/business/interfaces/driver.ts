@@ -1,4 +1,5 @@
 export interface DriverRideApproval {
     price: string,
-    rideId: string
+    rideId: string,
+    driverId: string,
 }

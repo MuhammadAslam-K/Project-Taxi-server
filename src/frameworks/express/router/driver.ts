@@ -14,5 +14,6 @@ driverRoute.post("/login", login.login)
 // PROTECTED
 driverRoute.get("/ride/search", ride.getRides)
 driverRoute.patch("/ride/accept", ride.driverAcceptRide)
+driverRoute.get("/ride", ride.ridesByDriverId)
 
 export default driverRoute

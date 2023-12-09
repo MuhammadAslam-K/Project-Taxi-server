@@ -18,4 +18,14 @@ export default {
             throw new Error((error as Error).message);
         }
     },
+
+    getBookingByDriverId: async (driverId: string) => {
+        try {
+            const bookings = await BookingSchema.find({ driver_id: driverId, driverStatus: "Approved" })
+            console.log(bookings)
+            return bookings || null
+        } catch (error) {
+            throw new Error((error as Error).message);
+        }
+    }
 }

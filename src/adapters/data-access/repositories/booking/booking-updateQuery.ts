@@ -6,7 +6,7 @@ export default {
         try {
             const rides = await BookingSchema.findByIdAndUpdate(
                 data.rideId,
-                { price: data.price, driverStatus: "Approved" }
+                { price: data.price, driverStatus: "Approved", driver_id: data.driverId }
             )
             return rides || null
         } catch (error) {

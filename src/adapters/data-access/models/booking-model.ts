@@ -5,15 +5,22 @@ const bookingSchema: Schema = new Schema({
 
     user_id: {
         type: String,
+        require: true
     },
     driver_id: {
         type: String,
     },
     pickupLocation: {
         type: String,
+        require: true
     },
     dropLocation: {
         type: String,
+        require: true
+    },
+    time: {
+        type: String,
+        require: true
     },
     price: {
         type: Number,
