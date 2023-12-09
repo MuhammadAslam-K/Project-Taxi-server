@@ -14,7 +14,6 @@ This repository contains the backend implementation for the Taxi Booking applica
 
 The backend codebase is organized using the Clean Architecture approach, which emphasizes separation of concerns and independence of frameworks and libraries. It consists of distinct layers:
 
-- **Entities**: Represent core business entities and domain logic.
 - **Use Cases**: Contain application-specific business rules and use case logic.
 - **Repositories**: Abstract database interactions, providing an interface for data access.
 - **Controllers/Routers**: Handle incoming HTTP requests, interact with use cases, and return appropriate responses.
