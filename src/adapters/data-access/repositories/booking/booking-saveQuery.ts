@@ -5,7 +5,7 @@ import BookingSchema from "../../models/booking-model";
 
 
 export default {
-    saveDriver: async (data: Booking, userId: string) => {
+    saveNewBooking: async (data: Booking, userId: string) => {
         try {
             const booking = new BookingSchema({ ...data, user_id: userId })
 

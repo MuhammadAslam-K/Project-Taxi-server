@@ -6,7 +6,7 @@ export default {
 
     bookNewRide: async (data: Booking, userId: string) => {
         try {
-            const result = await bookingSaveQuery.saveDriver(data, userId)
+            const result = await bookingSaveQuery.saveNewBooking(data, userId)
             return !!result
         } catch (error) {
             throw new Error((error as Error).message)
