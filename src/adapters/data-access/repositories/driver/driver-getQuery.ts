@@ -21,6 +21,15 @@ const driverRepositoryGetQuery = {
             throw new Error((error as Error).message);
         }
     },
+
+    getDriverWithDriverId: async (driverId: string) => {
+        try {
+            const driver = await DriverSchema.findById(driverId)
+            return driver || null
+        } catch (error) {
+            throw new Error((error as Error).message);
+        }
+    },
 };
 
 export default driverRepositoryGetQuery;

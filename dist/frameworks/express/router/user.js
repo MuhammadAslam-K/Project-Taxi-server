@@ -8,6 +8,7 @@ const signup_1 = __importDefault(require("../../../adapters/controllers/user/sig
 const login_1 = __importDefault(require("../../../adapters/controllers/user/login"));
 const booking_1 = __importDefault(require("../../../adapters/controllers/user/booking"));
 const rides_1 = __importDefault(require("../../../adapters/controllers/user/rides"));
+const driver_1 = __importDefault(require("../../../adapters/controllers/user/driver"));
 const userRoute = express_1.default.Router();
 // PUBLIC
 userRoute.post("/signup", signup_1.default.signup);
@@ -15,4 +16,5 @@ userRoute.post("/login", login_1.default.login);
 // PROTECTED
 userRoute.post("/booking", booking_1.default.booking);
 userRoute.get("/rides", rides_1.default.getRidesOfUser);
+userRoute.get("/info/driver", driver_1.default.driverInfo);
 exports.default = userRoute;
